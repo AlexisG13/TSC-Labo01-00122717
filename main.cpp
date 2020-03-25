@@ -7,9 +7,7 @@ using namespace std;
 
 void reverseMatrix(Matrix matrix, Matrix &inverseMatrix){
     float matrixDeterminant = determinant(matrix);
-    if(matrixDeterminant == 0) {
-        exit(EXIT_FAILURE);
-}
+    if(matrixDeterminant == 0) exit(EXIT_FAILURE);
     Matrix matrixCofactors, transposeCofactors; 
     cofactors(matrix, matrixCofactors);
     transpose(matrixCofactors, transposeCofactors);
